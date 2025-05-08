@@ -1,0 +1,227 @@
+/* Reset básico e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #212529; 
+    color: #FFFFFF; 
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #2c3136; 
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#logo {
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.logo-rotating {
+    animation: rotateLogo 10s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    color: #17A2B8; 
+    margin-bottom: 5px;
+    font-size: 2.2em;
+}
+
+.subtitle {
+    color: #ADB5BD; 
+    font-size: 0.95em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.io-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-section,
+.output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+}
+
+label {
+    color: #6C757D; 
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #495057; 
+    border-radius: 6px;
+    background-color: #343A40; 
+    color: #FFFFFF; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1em;
+    resize: vertical; 
+    min-height: 100px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #17A2B8; 
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+}
+
+textarea#outputText {
+    background-color: #2a2e32; 
+    cursor: default;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0px);
+}
+
+.btn-primary {
+    background-color: #17A2B8; 
+    color: #FFFFFF;
+}
+.btn-primary:hover {
+    background-color: #138496; 
+}
+
+.btn-secondary {
+    background-color: #6610F2; 
+    color: #FFFFFF;
+}
+.btn-secondary:hover {
+    background-color: #520dc2; 
+}
+
+.btn-clear {
+    background-color: #6C757D; 
+    color: #FFFFFF;
+    width: 100%; 
+    max-width: 200px; 
+    margin: 10px auto 0; 
+}
+.btn-clear:hover {
+    background-color: #5a6268;
+}
+
+.arrow {
+    font-size: 1.2em;
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #495057;
+    color: #6C757D; 
+    font-size: 0.8em;
+    text-align: center; 
+}
+
+footer p {
+    margin: 0; 
+}
+
+
+footer a,
+footer a:visited { 
+    color: #17A2B8; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.2s ease, text-decoration 0.2s ease; 
+}
+
+footer a:hover,
+footer a:focus { 
+    color: #138496; 
+    text-decoration: underline; 
+}
+
+footer a:active { 
+    color: #6610F2; 
+}
+
+/* Layout para telas maiores - botões lado a lado */
+@media (min-width: 600px) {
+    .io-area {
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+    .input-section, .output-section {
+        flex: 1; 
+    }
+    .controls {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: auto; 
+    }
+    .btn-primary, .btn-secondary {
+        width: 150px; 
+        justify-content: center;
+    }
+}

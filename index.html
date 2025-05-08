@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de César</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Logo Cifra de César" id="logo" class="logo-rotating">
+            <h1>Cifra de César</h1>
+            <p class="subtitle">Codifique e Decodifique mensagens com deslocamento 3</p>
+        </header>
+
+        <main>
+            <div class="io-area">
+                <div class="input-section">
+                    <label for="inputText">Texto Original:</label>
+                    <textarea id="inputText" rows="6" placeholder="Digite seu texto aqui..."></textarea>
+                </div>
+
+                <div class="controls">
+                    <button id="encodeButton" class="btn btn-primary">Codificar <span class="arrow">→</span></button>
+                    <button id="decodeButton" class="btn btn-secondary"><span class="arrow">←</span> Decodificar</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="outputText">Texto Processado:</label>
+                    <textarea id="outputText" rows="6" readonly placeholder="O resultado aparecerá aqui..."></textarea>
+                </div>
+            </div>
+            <button id="clearButton" class="btn btn-clear">Limpar Tudo</button>
+        </main>
+
+        <footer>
+            <p>© 2025 Desenvolvido com 🤍 por <a href="https://github.com/rossinoli" target="_blank" title="Link externo">Rossinoli</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
